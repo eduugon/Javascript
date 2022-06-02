@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let text = window.prompt("Introduce una suma:");
+
+        let sumandos = text.split("+")
+
+        if(!text.includes('+')) {
+            window.alert("Eso no es una suma");
+        }
+        else if(sumandos.length < 2 || sumandos.length > 2) {
+            window.alert("La suma tiene que tener 2 sumandos");
+        }
+
+        else if(isNaN(sumandos[0]) || isNaN(sumandos[1]) ) {
+            window.alert("Las sumandos tienen que ser números");
+        }
+    </script>
+</body>
+</html>

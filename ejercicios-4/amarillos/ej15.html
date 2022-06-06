@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let numHelados;
+        let descuento = 0;
+
+        do {
+
+            numHelados = parseInt(window.prompt("Cuantos helados te zampas:"));
+
+        } while(isNaN(numHelados) || numHelados <= 0);
+
+        if(numHelados > 10) {
+            numHelados++;
+            descuento = 2;
+        } 
+
+        console.log("Tenemos " + numHelados + " helados y nos han costado " + ((numHelados * 2) - descuento) + " euros");
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num1 = parseInt(window.prompt("Introduce un múmero:"));
+        let num2 = parseInt(window.prompt("Introduce otro múmero:"));
+
+        console.log(num1 + " + " + num2 + " = " + (num1 + num2));
+        console.log(num1 + " - " + num2 + " = " + (num1 - num2));
+        console.log(num1 + " * " + num2 + " = " + (num1 * num2));
+        console.log(num1 + " / " + num2 + " = " + (num1 / num2));
+
+        console.log("La media de " + num1 + " y " + num2 + " es " + Math.floor((num1 + num2) / 2));
+
+
+        if(num1 >= num2) {
+            console.log("El número más grande es " + num1);
+            console.log("El número más pequeño es " + num2);
+        } else {
+            console.log("El número más grande es " + num2);
+            console.log("El número más pequeño es " + num1);
+        }
+    </script>
+</body>
+</html>

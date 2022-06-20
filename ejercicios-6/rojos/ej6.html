@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="personas.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="emptyDiv">
+
+    </div>
+    <script>
+        let nombre = window.prompt('Nombre:');
+       
+        if(personas[nombre] !== undefined) {
+            console.log(personas[nombre])
+                    
+            const emptyDiv = document.getElementById("emptyDiv");
+
+            emptyDiv.style.position = "relative";
+            emptyDiv.style.left = "50%";
+            emptyDiv.style.right = "50%";
+            emptyDiv.style.backgroundColor =  personas[nombre].eyeColor;
+
+            let image = document.createElement("img");
+            image.id="photo"
+            image.setAttribute("src", personas[nombre].picture);
+            document.getElementById("emptyDiv").appendChild(image);
+
+            let name = document.createElement("h1");
+            name.textContent  = personas[nombre].name
+            name.id= "name";
+            document.getElementById("emptyDiv").appendChild(name).appendChild(document.createElement("br"));
+
+            var keys = Object.keys(personas[nombre]);
+
+            for (var i = 0; i < keys.length; i++) {
+                console.log(keys[i]);
+
+                let temp = document.createElement("span");
+                temp.textContent  = personas[nombre][keys[i]] 
+                document.getElementById("name").appendChild(temp).appendChild(document.createElement("br"));
+
+            }
+        }
+
+
+
+
+    </script>
+</body>
+</html>

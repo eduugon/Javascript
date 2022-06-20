@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        /**
+         *  Un número factorial es el resultado de multiplicar todos los números de 1 a ese mismo
+            número (por ejemplo el factorial de 4 es 1 x 2 x 3 x 4 = 24). Haz un programa que
+            muestre los números del 1 al 10 en una columna con el resultado de su factorial en la
+            columna de al lado.
+        **/
+
+        let factorial = 1;
+
+        for (let i = 1; i <= 10; i++) {
+            for (let j = 1; j <= i; j++) {
+               factorial *= j
+            }   
+            console.log("Factorial de " + i + ": " + factorial);
+            factorial = 1;
+        }
+
+
+    </script>
+</body>
+</html>
+

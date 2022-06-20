@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="superheroes.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="emptyDiv"></div>
+    <script>
+        let fecha = window.prompt('Fecha nacimiento:');
+        let nombre = window.prompt('Nombre:');
+        let apellido = window.prompt('Apellido:');
+
+        let primeraLetraNombre = nombre[0];
+
+        console.log(primeraLetraNombre);
+
+        let ultimaLetraApellido = apellido[apellido.length - 1];
+
+        console.log(ultimaLetraApellido);
+
+        let genero = window.prompt('Género:');
+
+        console.log(letraNombre[primeraLetraNombre][genero] + " " + letraApellido[ultimaLetraApellido][genero]+ " " + fechaNacimiento['num' + fecha][genero]);
+
+    </script>
+</body>
+</html>

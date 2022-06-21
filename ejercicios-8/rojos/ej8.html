@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /**
+        Escribe un programa para una empresa de alquiler de coches. Tendremos que
+        preguntar al usuario la edad. Si el usuario es menor de 18, no podrá alquilar un
+        vehículo y se lo diremos en pantalla. En caso de ser mayor de edad, le preguntamos
+        si tiene carnet de conducir. Si la respuesta es negativa, no podrá alquilar un coche y
+        se lo advertiremos por pantalla. Si es mayor de edad le pediremos tanto nombre
+        como apellido , ciudad de recogida del vehículo y número de días que quiere alquilar
+        el coche (el alquiler del coche por día tiene un coste de 25 euros y en caso que lo
+        alquile una semana, el coste será de 150 euros). Imprimir por pantalla los datos del
+        cliente que vaya a alquilar el coche y el coste total del alquiler
+        **/
+
+        let edad = parseInt(window.prompt());
+
+        if (edad < 18) {
+            let p1 = document.createElement("p");
+            p1.innerText =  "Sorry, eres menor de edad";
+            document.body.appendChild(p1);
+        }
+
+
+
+    </script>
+</body>
+</html>

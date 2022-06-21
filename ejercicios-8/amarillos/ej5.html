@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="if"> </div>
+    <div id="switch"> </div>
+    <div id="ternario"> </div>
+
+    <script>
+        /**
+        Crea un programa que te pida 2 números. Mostrar en pantalla la suma, la resta, la
+        multiplicación, la división y el resto de esos 2 números. Mostrar cada operación con
+        un color y un color de fondo distintos.
+
+
+        **/
+
+        let num1 = parseInt(window.prompt("Número 1:"));
+        let num2 = parseInt(window.prompt("Número 2:"));
+        let sumaHtml = document.createElement("p");
+        sumaHtml.innerText = "La suma de " + num1  + " y " + num2 + " es: " + (num1 + num2);
+        sumaHtml.style.color = "green";
+        sumaHtml.style.backgroundColor = "yellow";
+
+        let restaHtml = document.createElement("p");
+        restaHtml.innerText = "La resta de " + num1  + " y " + num2 + " es: " + (num1 - num2);
+        restaHtml.style.color = "red";
+        restaHtml.style.backgroundColor = "cyan";
+
+        let multHtml = document.createElement("p");
+        multHtml.innerText = "La multiplicacion de " + num1  + " y " + num2 + " es: " + (num1 * num2);
+        multHtml.style.color = "blue";
+        multHtml.style.backgroundColor = "purple";
+
+        let divHtml = document.createElement("p");
+        divHtml.innerText = "La division de " + num1  + " y " + num2 + " es: " + (num1 / num2);
+        divHtml.style.color = "violet";
+        divHtml.style.backgroundColor = "grey";
+
+        document.body.appendChild(sumaHtml)
+        document.body.appendChild(restaHtml)
+        document.body.appendChild(multHtml)
+        document.body.appendChild(divHtml)
+
+    </script>
+</body>
+</html>

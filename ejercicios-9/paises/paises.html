@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="paises.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        /**
+         * Pedir al usuario tres nombres de países de la Unión europea y extraer los datos del objeto
+        “paises”. Hay que asegurarse de que existen en el objeto y no son repetidos. Después:
+        1. Los 3 paises deberán aparecer en el navegador. Los tres estarán colocados uno
+        junto al otro, alineados horizontalmente.
+        2. Mostrar una card con los datos correspondientes, Nombre, Población y superficie.
+        3. En la imagen de la card, debera aparecer la bandera de cada país.
+        4. Añade un botón a cada planeta: al hacer click se cambiará el color de fondo de esa
+        tarjeta por el color de ese pais.
+
+        **/
+
+        function existCountry(country) {
+            for (const elem in paises) {
+                if(paises[elem].pais === country ) {
+                    chosenCountries.push(paises[elem]);
+                    return true;
+                }
+            }
+            console.log("Error, el pais " + country + " no existe");
+            return false;
+        }
+
+        function differentCountries(country1, country2, country3) {
+            if (country1 === country2) {
+                console.log("Error, el pais " + country1 + " está repetido");
+                return false;
+            }
+            if(country1 === country3) {
+                console.log("Error, el pais " + country1 + " está repetido");
+                return false;
+            }
+            if(country2 === country3) {
+                console.log("Error, el pais " + country2 + " está repetido");
+                return false;
+            }
+            return true;   
+        }
+
+        let country1;
+        let country2;
+        let country3;
+
+        let chosenCountries = [];
+
+        do {
+            country1 = window.prompt("Pais 1:");
+            country2 = window.prompt("Pais 2:");
+            country3 = window.prompt("Pais 3:");
+        } while(!existCountry(country1) || !existCountry(country2) || !existCountry(country3) || !differentCountries(country1, country2, country3));
+
+        let htmlCountries = "";
+
+        for (const country in chosenCountries) {
+            console.log("Pais: " + chosenCountries[country])
+            htmlCountries += `<div id=${chosenCountries[country].pais}>
+                <p> ${chosenCountries[country].pais} </p>
+                <p> ${chosenCountries[country].poblacion} </p>
+                <p> ${chosenCountries[country].superficie} </p>
+                <img src=${chosenCountries[country].bandera} width="200">
+                <button  type="button" id="${chosenCountries[country].pais}" Click here </button>
+
+            </div>`
+        }
+
+        console.log(htmlCountries);
+
+
+        document.body.innerHTML = htmlCountries;
+
+        for (const country in chosenCountries) {
+            document.getElementById(chosenCountries[country].pais).addEventListener('click',
+            () => {
+                document.getElementById(chosenCountries[country].pais).style.backgroundColor = chosenCountries[country].color;
+            }
+        )
+        }
+        
+    </script>
+</body>
+</html>

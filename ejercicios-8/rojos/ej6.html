@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="if"> </div>
+    <div id="switch"> </div>
+    <div id="ternario"> </div>
+
+    <script>
+        /**
+        Crea un programa que te pregunte qué operación deseas realizar (Suma, Resta,
+        Multiplicación, División y Resto). Después te pedirá dos números y aparecerán los
+        dos números introducidos y el resultado de la operación de forma visual.
+        **/
+
+        let op;
+        do {
+            op = window.prompt("¿Que quieres hacer? (S/R/M/D/r)")
+
+        } while((op !== 'S') && (op !== 'R') && (op !== 'M') && (op !== 'D') && (op !== 'r'));
+
+
+        let num1 = parseInt(window.prompt("Número 1:"));
+        let num2 = parseInt(window.prompt("Número 2:"));
+
+        if ((op === 'S')) {
+            let sumaHtml = document.createElement("p");
+            sumaHtml.innerText = "La suma de " + num1  + " y " + num2 + " es: " + (num1 + num2);
+            document.body.appendChild(sumaHtml)
+
+        } else if(op === 'R') {
+            let restaHtml = document.createElement("p");
+            restaHtml.innerText = "La resta de " + num1  + " y " + num2 + " es: " + (num1 - num2);
+            document.body.appendChild(restaHtml)
+        } else if(op === 'M') {
+            let multHtml = document.createElement("p");
+            multHtml.innerText = "La multiplicacion de " + num1  + " y " + num2 + " es: " + (num1 * num2);
+            document.body.appendChild(multHtml)
+        } else if(op === 'D') {
+            let divHtml = document.createElement("p");
+            divHtml.innerText = "La division de " + num1  + " y " + num2 + " es: " + (num1 / num2);
+            document.body.appendChild(divHtml)
+        } else {
+            let restoHtml = document.createElement("p");
+            restoHtml.innerText = "El resto de " + num1  + " y " + num2 + " es: " + (num1 % num2);
+            document.body.appendChild(restoHtml)
+        }
+        
+
+        
+
+
+
+
+    </script>
+</body>
+</html>

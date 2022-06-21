@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="if"> </div>
+    <div id="switch"> </div>
+    <div id="ternario"> </div>
+
+    <script>
+        /**Crea un programa que te pida un nombre y una edad. Si la edad es menor a 18 años
+        mostrar en pantalla “Hola (nombre), eres menor de edad.”. Si es mayor mostrar en
+        pantalla “Hola (nombre), eres mayor de edad.”. Hacedlo con if, switch y condicional
+        ternario.
+
+        Lo mismo que en el ejercicio 3. Pero si es menor de edad que el mensaje sea rojo y
+        si es mayor de edad que el mensaje sea verde.
+
+        **/
+
+        let name = window.prompt("Nombre:");
+        let age = parseInt(window.prompt("Edad:"));
+
+        let ifElem =  document.getElementById("if");
+        let switchElem =  document.getElementById("switch");
+        let ternaryElem =  document.getElementById("ternario");
+
+
+        if (age < 18) {
+            ifElem.innerHTML = "<p> Hola " + name + ", eres menor de edad </p>"
+            ifElem.style.color = "red"
+        } else {
+            ifElem.innerHTML = "<p> Hola " + name + ", eres mayor de edad </p>"
+            ifElem.style.color = "green"
+        }
+
+        switch(age < 18) {
+            case true:
+            switchElem.innerHTML = "<p> Hola " + name + ", eres menor de edad </p>"
+            switchElem.style.color = "red"
+
+            break;
+
+            default:
+            switchElem.innerHTML = "<p> Hola " + name + ", eres mayor de edad </p>"
+            switchElem.style.color = "green"
+
+        }
+
+
+        age < 18 ? 
+        ternaryElem.innerHTML = "<p> Hola " + name + ", eres menor de edad </p>"
+         : ternaryElem.innerHTML = "<p> Hola " + name + ", eres mayor de edad </p>";
+
+         age < 18 ? 
+        ternaryElem.style.color = "red"
+        : ternaryElem.style.color = "green"
+
+
+ 
+
+
+
+    </script>
+</body>
+</html>

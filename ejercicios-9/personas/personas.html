@@ -12,6 +12,8 @@
     <input type="text" id="inputName" name="inputName">
 
     <button type="button" id="button1">  Click here </button>
+
+    <div id="cards"></div>
     <script>
         
         /**
@@ -52,11 +54,11 @@
         document.getElementById("button1").addEventListener('click',
             () => {
                 let text = document.getElementById("inputName").value;
-                console.log("Valor: " + text);
+                let info = "";
 
                 elegidos.forEach(persona => { 
                     if(persona.nombre.includes(text)){
-                        document.body.innerHTML += `<div id=${persona.usuario}>
+                        info += `<div id=${persona.usuario}>
                         <p> ${persona.nombre} </p>
                         <p> ${persona.imagen} </p>
                         <p> ${persona.edad} </p>
@@ -68,6 +70,7 @@
                     }
                 });
 
+                document.getElementById("cards").innerHTML = info;
             }
         )
 

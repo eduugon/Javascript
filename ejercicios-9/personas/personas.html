@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="personas.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" id="inputName" name="inputName">
+
+    <button type="button" id="button1">  Click here </button>
+    <script>
+        
+        /**
+         * A partir del objeto personas, saca objetos nuevos a otro array que contengan únicamente
+        los siguientes datos: Nombre, imagen, edad, teléfono, nombre de usuario, y país.
+
+        1. Una vez creados, muestra la información de la primera persona del array. Creando
+        una card centrada.
+
+        2. Ahora es el usuario el que te introducirá un número. Si ese número es un índice
+        válido de nuestro array, mostraremos la información de esa persona, si no,
+        avisaremos al usuario del error.
+
+        3. Pide al usuario un texto y muestra las cards de todas las personas cuyo nombre
+        contenga ese texto..
+
+        4. Nuestra página en la carga solo mostrará un imput de texto y un botón. Al hacer click
+        en él se mostrarán todas las cards de personas cuyo texto contenga en su nombre.
+        Si no hubiera ningún texto en el imput, se mostrarán todas las cards.
+
+        **/
+
+                
+        let elegidos = [];
+
+        personas.forEach(persona => {
+
+            elegidos.push({
+                nombre: persona.name.first,
+                imagen: persona.picture.thumbnail,
+                edad: persona.dob.age,
+                telefono: persona.cell,
+                usuario: persona.login.username,
+                país: persona.location.country
+            })
+        });
+
+        document.getElementById("button1").addEventListener('click',
+            () => {
+                let text = document.getElementById("inputName").value;
+                console.log("Valor: " + text);
+
+                elegidos.forEach(persona => { 
+                    if(persona.nombre.includes(text)){
+                        document.body.innerHTML += `<div id=${persona.usuario}>
+                        <p> ${persona.nombre} </p>
+                        <p> ${persona.imagen} </p>
+                        <p> ${persona.edad} </p>
+                        <p> ${persona.telefono} </p>
+                        <p> ${persona.usuario} </p>
+                        <p> ${persona.pais} </p>
+                        <img src=${persona.imagen} width="200">
+                    </div>`
+                    }
+                });
+
+            }
+        )
+
+        /**
+
+        document.body.innerHTML = `<div id=${elegidos[0].usuario}>
+                <p> ${elegidos[0].nombre} </p>
+                <p> ${elegidos[0].imagen} </p>
+                <p> ${elegidos[0].edad} </p>
+                <p> ${elegidos[0].telefono} </p>
+                <p> ${elegidos[0].usuario} </p>
+                <p> ${elegidos[0].pais} </p>
+                <img src=${elegidos[0].imagen} width="200">
+            </div>`
+
+        if(elegidos[pos] !== undefined) {
+            document.body.innerHTML += `<div id=${elegidos[pos].usuario}>
+                <p> ${elegidos[pos].nombre} </p>
+                <p> ${elegidos[pos].imagen} </p>
+                <p> ${elegidos[pos].edad} </p>
+                <p> ${elegidos[pos].telefono} </p>
+                <p> ${elegidos[pos].usuario} </p>
+                <p> ${elegidos[pos].pais} </p>
+                <img src=${elegidos[pos].imagen} width="200">
+            </div>`
+
+        } else {
+            console.log("Error, esa persona no existe");
+        }
+
+
+        elegidos.forEach(persona => { 
+            if(persona.nombre.includes(text)){
+                document.body.innerHTML += `<div id=${persona.usuario}>
+                <p> ${persona.nombre} </p>
+                <p> ${persona.imagen} </p>
+                <p> ${persona.edad} </p>
+                <p> ${persona.telefono} </p>
+                <p> ${persona.usuario} </p>
+                <p> ${persona.pais} </p>
+                <img src=${persona.imagen} width="200">
+            </div>`
+            }
+        });
+
+        **/
+    </script>
+</body>
+</html>

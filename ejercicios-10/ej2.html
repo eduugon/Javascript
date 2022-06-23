@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let array = [];
+        let urlChars =  "https://api.disneyapi.dev/characters/"
+        let random = Math.floor(Math.random() * (500-1) + 1);
+
+        fetch(urlChars + 14).then((response) =>{
+            return response.json()
+        }).then((data)=>{
+            let divChar = document.createElement("div");
+            divChar.innerHTML = `<div id=${data.id}>
+                    <p> ${data.name} </p>
+                    <p> ${data._id} </p> 
+                    <img src="${data.imageUrl}"" alt="${data.name}" width="200">  
+                </div>
+                <br>`
+
+                if(data.films !== undefined && data.films.length !== 0) {
+                    divChar.innerHTML += `<ul>`
+
+                    data.films.forEach((film) => {
+                        divChar.innerHTML += `<li> ${film} </li>`
+                    })
+
+                    divChar.innerHTML += `</ul>`
+                }
+
+            document.body.appendChild(divChar);
+        })
+    </script>
+</script>
+</body>
+</html>

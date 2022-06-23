@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="personas.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <header>
+
+    </header>
+
+    <main>
+        <div id="divManzana">
+            <h2>Manzana</h2>
+            <button type="button" id="manzana+">  + </button>
+            <button type="button" id="manzana-"> - </button>
+
+
+        </div>
+        <div id="divCarne">
+            <h2>Carne</h2>
+            <button type="button" id="carne+">  + </button>
+            <button type="button" id="carne-"> - </button>
+        </div>
+        <div id="divLeche">
+            <h2>Leche</h2>
+            <button type="button" id="leche+">  + </button>
+            <button type="button" id="leche-"> - </button>
+        </div>
+        <div id="divPescado">
+            <h2>Pescado</h2>
+            <button type="button" id="pescado+">  + </button>
+            <button type="button" id="pescado-"> - </button>
+        </div>
+
+        <div id="cesta">
+            <div id="cestaManzana">
+
+            </div>
+            <div id="cestaCarne">
+                
+            </div>
+            <div id="cestaLeche">
+
+            </div>
+            <div id="cestaPescado">
+
+            </div>
+        </div>
+    </main>
+
+    <footer>
+
+    </footer>
+
+    <script>
+
+        let numManzanas = 0;
+        let numCarnes = 0;
+        let numLeches = 0;
+        let numPescados = 0;
+
+        function pintarManzanas(){
+            for (let i = 0; i < numManzanas; i++) {
+                document.getElementById("cestaManzana").innerHTML += `<img src= "iconos/manzana.png" width="100">`
+            }
+        }
+
+        function pintarCarnes(){
+            for (let i = 0; i < numCarnes; i++) {
+                document.getElementById("cestaCarne").innerHTML += `<img src= "iconos/carne.png" width="100">`
+            }
+        }
+
+        function pintarLeches(){
+            for (let i = 0; i < numLeches; i++) {
+                document.getElementById("cestaLeche").innerHTML += `<img src= "iconos/leche.png" width="100">`
+            }
+        }
+
+        function pintarPescados(){
+            for (let i = 0; i < numPescados; i++) {
+                document.getElementById("cestaPescado").innerHTML += `<img src= "iconos/pescado.png" width="100">`
+            }
+        }
+        
+        document.getElementById("manzana+").addEventListener('click',
+            () => {
+                numManzanas++;
+                if(numManzanas > 0){
+                    document.getElementById("cestaManzana").innerHTML = `
+                    <p> Manzanas: ${numManzanas}</p>
+                `
+                pintarManzanas();
+                } else {
+                    document.getElementById("cestaManzana").innerHTML = ``
+                } 
+            }
+        )
+         
+        document.getElementById("manzana-").addEventListener('click',
+            () => {
+                if(numManzanas > 0){
+                    numManzanas--;
+                }
+                
+                if(numManzanas > 0){
+                    document.getElementById("cestaManzana").innerHTML = `
+                    <p> Manzanas: ${numManzanas}</p>
+                `
+                pintarManzanas();
+                } else {
+                    document.getElementById("cestaManzana").innerHTML = ``
+                } 
+            }
+        )
+
+        document.getElementById("carne+").addEventListener('click',
+            () => {
+                numCarnes++;
+                if(numCarnes > 0){
+                    document.getElementById("cestaCarne").innerHTML = `
+                    <p> Carnes: ${numCarnes}</p>
+                `
+                pintarCarnes();
+                } else {
+                    document.getElementById("cestaCarne").innerHTML = ``
+                } 
+            }
+        )
+         
+        document.getElementById("carne-").addEventListener('click',
+            () => {
+                if(numCarnes > 0){
+                    numCarnes--;
+                }
+                
+                if(numCarnes > 0){
+                    document.getElementById("cestaCarne").innerHTML = `
+                    <p> Carnes: ${numCarnes}</p>
+                `
+                pintarCarnes();
+                } else {
+                    document.getElementById("cestaCarne").innerHTML = ``
+                } 
+            }
+        )
+
+        document.getElementById("leche+").addEventListener('click',
+            () => {
+                numLeches++;
+                if(numLeches > 0){
+                    document.getElementById("cestaLeche").innerHTML = `
+                    <p> Leches: ${numLeches}</p>
+                `
+                pintarLeches();
+                } else {
+                    document.getElementById("cestaLeche").innerHTML = ``
+                } 
+            }
+        )
+         
+        document.getElementById("leche-").addEventListener('click',
+            () => {
+                if(numLeches > 0){
+                    numLeches--;
+                }
+                
+                if(numLeches > 0){
+                    document.getElementById("cestaLeche").innerHTML = `
+                    <p> Leches: ${numLeches}</p>
+                `
+                pintarLeches();
+                } else {
+                    document.getElementById("cestaLeche").innerHTML = ``
+                } 
+            }
+        )
+
+        document.getElementById("pescado+").addEventListener('click',
+            () => {
+                numPescados++;
+                if(numPescados > 0){
+                    document.getElementById("cestaPescado").innerHTML = `
+                    <p> Pescados: ${numPescados}</p>
+                `
+                pintarPescados();
+                } else {
+                    document.getElementById("cestaPescado").innerHTML = ``
+                } 
+            }
+        )
+         
+        document.getElementById("pescado-").addEventListener('click',
+            () => {
+                if(numPescados > 0){
+                    numPescados--;
+                }
+                
+                if(numPescados > 0){
+                    document.getElementById("cestaPescado").innerHTML = `
+                    <p> Pescados: ${numPescados}</p>
+                `
+                pintarPescados();
+                } else {
+                    document.getElementById("cestaPescado").innerHTML = ``
+                } 
+            }
+        )
+
+
+    </script>
+</body>
+</html>

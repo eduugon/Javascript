@@ -285,6 +285,10 @@ body {
   width: 15%;
   justify-self: flex-start;
   align-self: center;
+  font-family: 'Orbitron', sans-serif;
+  color: white;
+  margin-left: 15px;
+  font-size: 20px;
 }
 
 #nav__refs{
@@ -308,6 +312,10 @@ body {
 }
 .nav__button:hover{
   color:rgb(249, 253, 0);
+  border-bottom: 1px solid white;
+}
+
+.selected {
   border-bottom: 1px solid white;
 }
 
@@ -347,17 +355,59 @@ body {
 
 #findBody__divFind{
   margin-top: 20px;
-  width: 80%;
+  margin-bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#findBody__divFind-input{
+  width:80%
+}
+
+#findBody__divFind-find {
+  background-color: blue;
+  height: 44px;
+  width: 7%;
+  margin-bottom: 1px;
+  margin-top: 1px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#findBody__divFind-find img {
+  height: 20px;
+  width: 20px;
 }
 
 
-#findCardsInput{
+#findCardsText{
   width:100%;
   border: 2px solid rgb(79, 91, 255);
   box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
-  border-radius: 5px;
+  border-radius: 10px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
   height: 30px;
   padding: 20px;
+}
+
+#findCardsButton{
+  font-family: 'Righteous';
+  color: white;
+  font-size: 15px;
+}
+
+.card {
+  border:2px solid rgb(34, 73, 250);
+  border-radius: 5px;
+  width: 87%;
+  background-color: rgb(227, 255, 255);
 }
 
 

@@ -8,13 +8,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Righteous&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Orbitron:wght@500&family=Righteous&display=swap" rel="stylesheet">
     <title>Búsqueda</title>
 </head>
 <body>
     <nav class="nav">
         <div id="nav__icon">
             <a href="./pagPrincipal.html">
-                <img src="./images/digimonLogo.png" alt="Logo">
+                DIGIMON DATABASE
             </a>  
         </div>
         
@@ -25,13 +26,12 @@
             </div>
             <div class="nav__button" id="navFind">
                 <img src="./images/find.png" alt="find" class="nav__buttonIcon">
-                <a href="./Buscar.html">Buscar</a>  
+                <a href="./Buscar.html">Búsqueda</a>  
                     
             </div>
             <div class="nav__button" id="navInfo">
                 <img  id="infoIcon" src="./images/info.png" alt="info" class="nav__buttonIcon"> 
-                <a href="./AcercaDe.html">Acerca de</a> 
-                    
+                <a href="./AcercaDe.html">Acerca de</a>      
             </div>
         </div>
     </nav> 
@@ -45,9 +45,27 @@
         </div>
 
         <div id="findBody__divFind">
-            <input type="text" id="findCardsInput" name="findCardsInput" placeholder="Introduce el nombre de la carta">
-        </div>       
+            <div id="findBody__divFind-input">
+                <input type="text" id="findCardsText" name="findCardsText" placeholder="Introduce el nombre de la carta">
+            </div>
+            <div  id="findBody__divFind-find">
+                <div>
+                    <button type="button" id="findCardsButton">
+                        Buscar
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="findBody__cardList">
+            <div class="card">
+                Hola
+            </div>
+        </div>      
     </div>
+
+
     
+    <script src="./javascript/CurrentPageLoader.js"></script>
+    <script src="./javascript/CardFinder.js"></script>
 </body>
 </html>

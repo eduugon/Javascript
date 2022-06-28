@@ -73,9 +73,40 @@ function checkFullfilledFields() {
     return document.getElementById("findCardsText").value.trim() !== "";
 }
 
-function fullfillDigimonCard(digimon){
+function getColorCardClass(color) {
+
+    let colorClass;
+
+    switch (color) {
+        case "Yellow":
+            colorClass = "yellowDigimonCard"; 
+          break;
+        case "Black":
+            colorClass = "blackDigimonCard"; 
+          break;
+        case "Green":
+            colorClass = "greenDigimonCard"; 
+          break;
+        case "Blue":
+            colorClass = "blueDigimonCard"; 
+          break;
+        case "Purple":
+            colorClass = "purpleDigimonCard"; 
+          break;
+        case "Red":
+            colorClass = "redDigimonCard"; 
+          break;
+        default:
+            colorClass = ""; 
+          break;
+      }
+
+      return colorClass;
+}
+
+function fullfillDigimonCard(digimon, colorClass){
     return `        
-    <div class="cardContainer">        
+    <div class="cardContainer ${colorClass}">        
         <div class="cardContainer-img">
             <div class="cardMainName">
                 ${digimon.name}
@@ -221,7 +252,8 @@ document.getElementById("findCardsButton").addEventListener('click',
 
                 arrayDigimones.forEach(digimon => {
                     checkNullFields(digimon);
-                    document.getElementById("findBody__cardList").innerHTML += fullfillDigimonCard(digimon);
+
+                    document.getElementById("findBody__cardList").innerHTML += fullfillDigimonCard(digimon, getColorCardClass(digimon.color));
                 });
             }).catch((error) => {
                 let message;

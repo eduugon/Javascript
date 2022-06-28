@@ -404,10 +404,10 @@ body {
 }
 
 .cardContainer {
-  border:2px solid rgb(34, 73, 250);
+  border:2px solid rgb(0, 0, 0);
   border-radius: 5px;
   width: 87%;
-  background-color: rgb(227, 255, 255);
+  background-color: rgb(255, 255, 255);
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -489,6 +489,7 @@ body {
   letter-spacing: 1.2px;
 }
 
+/* NOTE: Warning field */
 .warningField {
   border:2px solid rgb(240, 255, 27);
   background-color: rgb(255, 245, 223);
@@ -496,18 +497,21 @@ body {
 
 }
 
+/* NOTE: Success field */
 .infoFoundField {
   border:2px solid rgb(0, 255, 21);
   background-color: rgb(204, 255, 197);
   color:rgb(0, 109, 18);
 }
 
+/* NOTE: Error field */
 .errorField {
   border:2px solid rgb(255, 36, 36);
   background-color: rgb(255, 218, 213);
   color:rgb(151, 48, 0);
 }
 
+/* NOTE: Generic field */
 .genericField {
   width: 87%;
   height: 50px;
@@ -520,6 +524,42 @@ body {
   letter-spacing: 1.2px;
   visibility: hidden;
   margin-bottom: 20px;
+}
+
+/* NOTE: Black Cards */
+.blackDigimonCard {
+  border:2px solid rgb(20, 20, 20);
+  background-color: rgb(221, 221, 221);
+}
+
+/* NOTE: Blue Cards */
+.blueDigimonCard {
+  border:2px solid rgb(37, 0, 172);
+  background-color: rgb(208, 223, 255);
+}
+
+/* NOTE: Green Cards */
+.greenDigimonCard {
+  border:2px solid rgb(6, 168, 0);
+  background-color: rgb(216, 255, 212);
+}
+
+/* NOTE: Purple Cards */
+.purpleDigimonCard {
+  border:2px solid rgb(126, 0, 151);
+  background-color: rgb(255, 230, 255);
+}
+
+/* NOTE: Red Cards */
+.redDigimonCard {
+  border:2px solid rgb(255, 0, 0);
+  background-color: rgb(255, 228, 228);
+}
+
+/* NOTE: Yellow Cards */
+.yellowDigimonCard {
+  border:2px solid rgb(208, 255, 0);
+  background-color: rgb(254, 255, 220);
 }
 
 

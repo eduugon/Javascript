@@ -411,6 +411,7 @@ body {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  margin-bottom: 20px;
 }
 
 .cardContainer-img{
@@ -432,7 +433,17 @@ body {
 }
 
 .cardContainer-info {
-  border:1px solid green;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: space-between;
+  height: 370px;
+  margin-left: 20px;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.cardContainer-info p {
+  font-size: 10px;
 }
 
 .cardExtraInfo {
@@ -443,6 +454,38 @@ body {
   font-family: 'Righteous';
   margin-bottom: 20px;
 }
+
+.cardContainer-info-elem {
+  display:flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.elem-title {
+  width: 100px;
+  font-weight:bolder;
+}
+
+.cardContainer-effects{
+  height: 370px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: space-between;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.effect-title, .source-title {
+  font-family: 'Orbitron', sans-serif;
+  font-weight:bolder;
+}
+
+.source-info, .effect-info {
+  margin-top: 5px;
+  letter-spacing: 1.2px;
+}
+
 
 
 

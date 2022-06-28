@@ -403,11 +403,45 @@ body {
   font-size: 15px;
 }
 
-.card {
+.cardContainer {
   border:2px solid rgb(34, 73, 250);
   border-radius: 5px;
   width: 87%;
   background-color: rgb(227, 255, 255);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.cardContainer-img{
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 25px;
+}
+
+.cardMainName {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+.cardContainer-photoCard {
+  width: 230px;
+}
+
+.cardContainer-info {
+  border:1px solid green;
+}
+
+.cardExtraInfo {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Righteous';
+  margin-bottom: 20px;
 }
 
 

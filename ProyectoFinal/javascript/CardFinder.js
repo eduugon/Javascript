@@ -117,7 +117,39 @@ function getColorCardClass(color) {
       return colorClass;
 }
 
-function fullfillDigimonCard(digimon, colorClass){
+function isFavouriteCard(digimon) {
+    let arrayDigimons = getFavouriteDigimons();
+
+    return arrayDigimons.includes(digimon.cardnumber);
+}
+
+function saveFavouriteCard(cardNumber) {
+    let arrayDigimon = getFavouriteDigimons();
+    arrayDigimon.push(cardNumber);
+
+    localStorage.setItem("favouriteDigimons", JSON.stringify(arrayDigimon));
+
+    window.alert(`La carta ${cardNumber} ahora es de tus favoritas!`);
+
+    document.getElementById(`favouriteButton${cardNumber}`).classList.add("hiddenButton");
+
+    let elem =  document.getElementById(`favImg${cardNumber}`);
+
+    document.getElementById(`favImg${cardNumber}`).classList.remove("hiddenButton");
+}
+
+
+function getFavouriteDigimons() {
+    var arrayDigimon = [];
+
+    if(localStorage.getItem("favouriteDigimons") === null) {
+        localStorage.setItem("favouriteDigimons", JSON.stringify(arrayDigimon));
+    }
+
+    return JSON.parse(localStorage.getItem("favouriteDigimons"));
+}
+
+function fullfillDigimonCard(digimon, colorClass, hiddenButtonClass, hiddenImgClass){
     return `        
     <div class="cardContainer ${colorClass}">        
         <div class="cardContainer-img">
@@ -133,6 +165,9 @@ function fullfillDigimonCard(digimon, colorClass){
                 </div>
                 <div class="cardExtraInfo-color">
                 ${digimon.color}
+                </div>
+                <div class="cardExtraInfo-color">
+                    <img id="favImg${digimon.cardnumber}" src="./images/estrella.png" class="favImgClass ${hiddenImgClass}">
                 </div>
             </div>
             <img  id="${digimon.name}" src="${digimon.image_url}" alt="infoCard" class="cardContainer-photoCard"> 
@@ -200,7 +235,7 @@ function fullfillDigimonCard(digimon, colorClass){
         <div class="cardContainer-effects">
             <div class="cardContainer-effects-favourite">
                 <div class="favourite-button">
-                    <button onclick="saveFavouriteCard('${digimon.cardnumber}')" id="favouriteButton">
+                    <button onclick="saveFavouriteCard('${digimon.cardnumber}')" id="favouriteButton${digimon.cardnumber}" class="favouriteButton ${hiddenButtonClass}">
                         Guardar
                     </button>
                 </div>
@@ -235,7 +270,6 @@ function setSuccessField(arrayDigimones) {
 }
 
 function setErrorField(message) {
-    console.log("Error " + message);
     document.getElementById("infoField").classList.remove("infoFoundField");
     document.getElementById("infoField").classList.remove("warningField");
     document.getElementById("infoField").classList.add("errorField");
@@ -249,25 +283,6 @@ function setWarningField(message) {
     document.getElementById("infoField").classList.remove("errorField");
     document.getElementById("infoField").innerText = "Error, rellena al menos 1 campo de búsqueda";
     document.getElementById("infoField").style.visibility = "visible";
-}
-
-function saveFavouriteCard(cardNumber) {
-    let arrayDigimon = getFavouriteDigimons();
-    arrayDigimon.push(cardNumber);
-
-    localStorage.setItem("favouriteDigimons", JSON.stringify(arrayDigimon));
-
-    console.log(localStorage.getItem("favouriteDigimons"));
-}
-
-function getFavouriteDigimons() {
-    var arrayDigimon = [];
-
-    if(localStorage.getItem("favouriteDigimons") === null) {
-        localStorage.setItem("favouriteDigimons", JSON.stringify(arrayDigimon));
-    }
-
-    return JSON.parse(localStorage.getItem("favouriteDigimons"));
 }
 
 
@@ -287,13 +302,24 @@ document.getElementById("findCardsButton").addEventListener('click',
 
             }).then((data)=>{
                 arrayDigimones = data;
+
+                let hiddenButtonClass;
+                let hiddenImgClass;
                 
                 setSuccessField(arrayDigimones)
 
                 arrayDigimones.forEach(digimon => {
                     checkNullFields(digimon);
 
-                    document.getElementById("findBody__cardList").innerHTML += fullfillDigimonCard(digimon, getColorCardClass(digimon.color));
+                    if(isFavouriteCard(digimon)) {
+                        hiddenButtonClass = "hiddenButton";
+                        hiddenImgClass = "";
+                    } else {
+                        hiddenButtonClass = "";
+                        hiddenImgClass = "hiddenButton";
+                    }
+
+                    document.getElementById("findBody__cardList").innerHTML += fullfillDigimonCard(digimon, getColorCardClass(digimon.color), hiddenButtonClass, hiddenImgClass);
                 });
             }).catch((error) => {
                 let message;

@@ -453,7 +453,7 @@ body {
   align-items: center;
   font-family: 'Righteous';
   margin-bottom: 20px;
-  font-size: 15px;
+  font-size: 13px;
 }
 
 .cardContainer-info-elem {
@@ -480,7 +480,7 @@ body {
 
 .cardContainer-effects-favourite {
   justify-self: flex-start;
-  align-self: center;
+  align-self: flex-start;
 }
 
 .effect-title, .source-title {
@@ -489,6 +489,7 @@ body {
 }
 
 .source-info, .effect-info {
+  display: inline-block;
   margin-top: 5px;
   letter-spacing: 1.2px;
 }
@@ -594,7 +595,7 @@ body {
 }
 
 /* NOTE: Favourite button */
-#favouriteButton {
+.favouriteButton {
   background-color: rgb(255, 255, 109);
   border: 3px solid rgb(185, 185, 153);
   width:150px;
@@ -604,10 +605,20 @@ body {
   font-family: 'Permanent Marker', cursive;
 }
 
-#favouriteButton:hover {
+/* NOTE: Favourite button hover */
+.favouriteButton:hover {
   background-color: rgb(255, 214, 32);
   border: 3px solid rgb(0, 0, 0);
   transition: 1s;
+}
+
+/* NOTE: Favourite button when is hidden */
+.hiddenButton {
+  visibility: hidden;
+}
+/* NOTE: Favourite img */
+.favImgClass{
+  width: 15px;
 }
 
 

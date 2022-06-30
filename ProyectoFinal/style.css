@@ -414,7 +414,6 @@ body {
   margin-bottom: 20px;
   box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
 }
-
 .cardContainer-img{
   display:flex;
   flex-direction: column;
@@ -477,6 +476,11 @@ body {
   align-items: space-between;
   margin-left: 20px;
   margin-right: 20px;
+}
+
+.cardContainer-effects-favourite {
+  justify-self: flex-start;
+  align-self: center;
 }
 
 .effect-title, .source-title {
@@ -578,7 +582,7 @@ body {
   background-color: rgb(228, 242, 255);
   border: 2px solid rgb(79, 91, 255);
   border-radius: 10px;
-  padding: 8px 8px;
+  padding: 10px 8px;
   font-size: 13px;
   color:rgb(78, 86, 92);
   letter-spacing: 1.5px;
@@ -587,6 +591,23 @@ body {
 
 #combobox-type {
   margin-left: 30px;
+}
+
+/* NOTE: Favourite button */
+#favouriteButton {
+  background-color: rgb(255, 255, 109);
+  border: 3px solid rgb(185, 185, 153);
+  width:150px;
+  height: 40px;
+  border-radius: 5px;
+  font-size: 17px;
+  font-family: 'Permanent Marker', cursive;
+}
+
+#favouriteButton:hover {
+  background-color: rgb(255, 214, 32);
+  border: 3px solid rgb(0, 0, 0);
+  transition: 1s;
 }
 
 

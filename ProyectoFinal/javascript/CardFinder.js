@@ -198,6 +198,14 @@ function fullfillDigimonCard(digimon, colorClass){
         </div>
 
         <div class="cardContainer-effects">
+            <div class="cardContainer-effects-favourite">
+                <div class="favourite-button">
+                    <button onclick="saveFavouriteCard('${digimon.cardnumber}')" id="favouriteButton">
+                        Guardar
+                    </button>
+                </div>
+            </div>
+                
             <div class="cardContainer-effects-source">
                 <div class="effect-title">
                     Main Effect
@@ -243,6 +251,25 @@ function setWarningField(message) {
     document.getElementById("infoField").style.visibility = "visible";
 }
 
+function saveFavouriteCard(cardNumber) {
+    let arrayDigimon = getFavouriteDigimons();
+    arrayDigimon.push(cardNumber);
+
+    localStorage.setItem("favouriteDigimons", JSON.stringify(arrayDigimon));
+
+    console.log(localStorage.getItem("favouriteDigimons"));
+}
+
+function getFavouriteDigimons() {
+    var arrayDigimon = [];
+
+    if(localStorage.getItem("favouriteDigimons") === null) {
+        localStorage.setItem("favouriteDigimons", JSON.stringify(arrayDigimon));
+    }
+
+    return JSON.parse(localStorage.getItem("favouriteDigimons"));
+}
+
 
 document.getElementById("findCardsButton").addEventListener('click',
     () => {
@@ -282,3 +309,5 @@ document.getElementById("findCardsButton").addEventListener('click',
         }
     }
 )
+
+

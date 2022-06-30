@@ -62,15 +62,28 @@ function checkNullFields(digimon) {
 function buildDigimonUrl() {
     let url = "https://digimoncard.io/api-public/search.php";
     let inputValue = document.getElementById("findCardsText").value.trim();
+    let comboColorValue = document.getElementById("combo-color").value;
+    let comboTypeValue = document.getElementById("combo-type").value;
+
+    let notFirstElement = "?";
 
     if(inputValue !== "") {
-        url += `?n=${inputValue}`
+        url +=  notFirstElement + `n=${inputValue}`
+        notFirstElement = "&";
+    }
+    if(comboColorValue !== "") {
+        url += notFirstElement + `color=${comboColorValue}`;
+        notFirstElement = "&";
+    }
+    if(comboTypeValue !== "") {
+        url += notFirstElement + `type=${comboTypeValue}`;
+        notFirstElement = "&";
     }
     return url;
 }
 
 function checkFullfilledFields() {
-    return document.getElementById("findCardsText").value.trim() !== "";
+    return document.getElementById("findCardsText").value.trim() !== "" || document.getElementById("combo-color").value !== "" || document.getElementById("combo-type").value !== "";
 }
 
 function getColorCardClass(color) {

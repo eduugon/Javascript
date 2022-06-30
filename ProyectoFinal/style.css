@@ -563,6 +563,34 @@ body {
 }
 
 
+/* NOTE: Combo-box Color Div */
+#findBody__ComboboxDiv {
+  width:80%;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* NOTE: Coomon cobobox properties */
+.combobox-digimon select {
+  font-family: 'Orbitron', sans-serif;
+  background-color: rgb(228, 242, 255);
+  border: 2px solid rgb(79, 91, 255);
+  border-radius: 10px;
+  padding: 8px 8px;
+  font-size: 13px;
+  color:rgb(78, 86, 92);
+  letter-spacing: 1.5px;
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+}
+
+#combobox-type {
+  margin-left: 30px;
+}
+
+
+
 
 
 

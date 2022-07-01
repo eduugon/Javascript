@@ -1,0 +1,51 @@
+let digimons = [
+    {
+        name: 'Nene Amano',
+        carnumber: 'BT10-092',
+        cardrarity: 'Rare',
+        color: 'Black',
+        level: '-',
+        dp: '-',
+    },
+    {
+        name: 'Renamon',
+        carnumber: 'BT10-032',
+        cardrarity: 'Uncommon',
+        color: 'Yellow',
+        level: '3',
+        dp: '1000',
+    },     
+    {
+        name: 'Upamon',
+        carnumber: 'BT1-003',
+        cardrarity: 'Rare',
+        color: 'Blue',
+        level: '2',
+        dp: '-',
+    }, 
+    {
+        name: 'Omnimon',
+        carnumber: 'BT1-084',
+        cardrarity: 'Super Rare',
+        color: 'White',
+        level: '7',
+        dp: '15000',
+    },
+    {
+        name: 'Greymon',
+        carnumber: 'BT1-015',
+        cardrarity: 'Uncommon',
+        color: 'Red',
+        level: '4',
+        dp: '4000',
+    }, 
+    {
+        name: 'Kabuterimon',
+        carnumber: 'BT1-073',
+        cardrarity: 'Alternative Art',
+        color: 'Green',
+        level: '4',
+        dp: '5000',
+    },                
+}
+

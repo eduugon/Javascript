@@ -269,6 +269,10 @@ body {
   font-family: 'Nunito Sans', sans-serif;
 }
 
+.bodyContainer {
+  min-height: 470px;
+}
+
 
 /* NOTE: layout */
 
@@ -333,9 +337,50 @@ body {
 
 /* NOTE: Components */
 
-/* NOTE: Modules */
+/* NOTE: Footer elements*/
+.mainFooter {
+  background-color: rgb(38, 0, 77);
+  width: 100%;
+}
 
-/* NOTE: Pages */
+#mainFooter__top {
+  background-color: rgb(133, 51, 255);
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+#mainFooter__mid {
+  height: 140px;
+  background-color: rgb(35, 0, 70);
+  display: flex;
+  justify-items: center;
+  align-items: flex-end;
+}
+
+#mainFooter__mid-text {
+  margin-bottom: 10px;
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+span {
+  content: "\00A9";
+  font-size: 18px;
+}
+
+#mainFooter__top div {
+  margin: 0 20px;
+  color:white;
+  font-family: 'Righteous';
+}
+
+#githubImg {
+  width: 30px;
+}
+
 
 #findBody, #mainBody {
   margin-top: 30px;
@@ -522,9 +567,9 @@ body {
 
 /* NOTE: Info field */
 .infoMainField {
-  border:2px solid rgb(37, 0, 202);
-  background-color: rgb(213, 219, 255);
-  color:rgb(1, 0, 68);
+  border:2px solid rgb(62, 130, 255);
+  background-color: rgb(233, 236, 255);
+  color:rgb(48, 85, 170);
   margin-top: 20px;
 }
 
@@ -584,6 +629,12 @@ body {
 .yellowDigimonCard {
   border:2px solid rgb(208, 255, 0);
   background-color: rgb(254, 255, 220);
+}
+
+/* NOTE: White Cards */
+.whiteDigimonCard {
+  border:2px solid rgb(49, 49, 49);
+  background-color: rgb(238, 238, 238);
 }
 
 
@@ -646,8 +697,12 @@ body {
   grid-template-columns: repeat(4, 24.5% [col-start]);
 }
 
+#mainInfoField {
+  align-self: center;
+  width:97%;
+}
+
 .cardContainer-favs {
-  border:2px solid rgb(0, 0, 0);
   box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
   border-radius: 10px;
   display:inline-block;

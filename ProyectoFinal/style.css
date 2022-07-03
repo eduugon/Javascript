@@ -382,18 +382,18 @@ span {
 }
 
 
-#findBody, #mainBody {
+#findBody, #mainBody, #infoBody {
   margin-top: 30px;
   margin-left: 30px;
 }
 
-#findBody__title, #mainBody__title {
+#findBody__title, #mainBody__title, #infoBody__title {
   font-size: 40px;
   letter-spacing: 2px;
   margin-bottom:5px;
 }
 
-#findBody__info p, #mainBody__info p {
+#findBody__info p, #mainBody__info p, #infoBody__info p {
   color:rgb(82, 82, 82);
 }
 
@@ -716,6 +716,68 @@ span {
   margin-bottom: 20px;
   font-size: 20px;
   text-align: center;
+}
+
+
+/* NOTE: Info page */
+
+#infoDiv {
+  display:flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 40px 0;
+}
+
+#infoDiv__img, #infoDiv__text {
+    width: 50%;
+}
+
+#infoDiv__text {
+  margin-left: 10px;
+}
+
+#infoDiv__digiPanel {
+  border-radius: 8px;
+}
+
+
+#digi-info{
+  font-size: 10px;
+}
+
+#infoDiv__img {
+  border-radius: 5px;
+  border: 1px solid rgb(151, 151, 151);
+  padding: 5px;
+}
+
+#infoDiv__text h1 {
+  font-family: 'Orbitron', sans-serif;
+  color: rgb(9, 9, 114);
+  font-size: 35px;
+  letter-spacing: 1.5px;
+  text-align: center;
+  margin: 10px 0;;
+}
+
+#infoDiv__text p {
+  font-family: 'Orbitron', sans-serif;
+  color: rgb(82, 82, 82);
+  font-size: 16px;
+  letter-spacing: 1.7px;
+  margin-right: 20px;
+}
+
+#digi-official-page {
+  color: rgb(79, 91, 255);
+  border-radius: 5px;
+  padding: 0 4px;
+}
+
+#digi-official-page:hover {
+  color: rgb(44, 58, 255);
+  background-color: rgb(228, 230, 255);
+  transition: 0.5s;
 }
 
 

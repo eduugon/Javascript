@@ -921,8 +921,34 @@ li {
   }
   #mainInfoField {
     margin-left: 0;
-    width:91%
-
+    width:91%;
+  }
+  .nav__button{
+    font-size: 12px;
+    width: 25%;
+  }
+  #infoDiv {
+    flex-wrap: wrap;
+  }
+  #infoDiv__img, #infoDiv__text {
+    margin-right: 20px;
+    width: 80%;
+  }
+  #infoDiv__text h1{
+    font-size: 15px;
+  }
+  #infoDiv__text p{
+    font-size: 12px;
+    text-align: center;
+  }
+  #bywinfo {
+    flex-direction: column;
+  }
+  .thirdDiv {
+    width: 90%;
+    min-height: 220px;
+    text-align: center;
+    margin-bottom: 20px;
   }
  }
 

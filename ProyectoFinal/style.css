@@ -862,11 +862,12 @@ li {
 
   nav {
     flex-wrap: wrap;
-    min-height: 300px;
+    min-height: 150px;
   }
 
   #nav__refs {
     flex-wrap: wrap;
+    margin-bottom: 0px;
   }
   #findBody__ComboboxDiv {
     flex-wrap: wrap;
@@ -874,7 +875,7 @@ li {
     min-height: 100px;
   }
   #findBody__divFind-input{
-    width:60%
+    width:72%
   }
   #findBody__divFind-find {
     width: 20%;
@@ -949,6 +950,28 @@ li {
     min-height: 220px;
     text-align: center;
     margin-bottom: 20px;
+  }
+  #findBody__title, #mainBody__title, #infoBody__title {
+    border-bottom: 3px solid rgb(79, 91, 255);
+    margin-right: 24px;
+    text-align: center;
+   }
+
+   #findBody__info p, #mainBody__info p, #infoBody__info p {
+    text-align: center;
+    margin-right: 20px;
+   }
+   .bodyContainer {
+    min-height: 500px;
+  }
+  .cardContainer-info {
+    text-align: center;
+    margin: 0;
+  }
+  .cardContainer-effects {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
  }
 

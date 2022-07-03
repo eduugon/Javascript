@@ -851,6 +851,82 @@ li {
 }
 
 
+@media (max-width: 767.98px) {
+  #mainBody__cardList {
+    grid-template-columns: repeat(1, 95% [col-start]);
+    margin:20px 0;
+  }
+  #mainFooter__top {
+    height: 200px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    min-height: 300px;
+  }
+
+  #nav__refs {
+    flex-wrap: wrap;
+  }
+  #findBody__ComboboxDiv {
+    flex-wrap: wrap;
+    width:100%;
+    min-height: 100px;
+  }
+  #findBody__divFind-input{
+    width:60%
+  }
+  #findBody__divFind-find {
+    width: 20%;
+    justify-content: center;
+
+  }
+  .cardContainer {
+    width: 87%;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .cardContainer-effects-favourite {
+    justify-self: center;
+    align-self: center;
+    margin:20px 0;
+  }
+  .cardContainer-effects{
+    height: 100%;
+    flex-wrap: wrap;
+  }
+  .genericField {
+    text-align: center;
+  }
+  #nav__icon {
+    width: 100%;
+    text-align: center;
+    margin:0;
+    border-bottom: 3px solid white;
+  }
+  #findBody__ComboboxDiv {
+    min-width: 90%;
+  }
+  .combobox-digimon {
+    margin:0 0;
+  }
+
+  #combo-color {
+    margin-left: 30px;
+  }
+
+  #combo-color, #combo-type {
+    width:100%;
+    margin-bottom: 20px;
+  }
+  #mainInfoField {
+    margin-left: 0;
+    width:91%
+
+  }
+ }
+
+
 
 
 
